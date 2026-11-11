@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato — Lidmay</title>
+<meta name="description" content="Fale com a Lidmay e conte qual problema do seu negócio podemos resolver. Orçamento sem compromisso.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1026">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contato">
+<div id="header"></div>
+<main>
+<section class="page-head"><div class="container">
+<span class="eyebrow">Contato</span>
+<h1>Vamos conversar sobre o <span class="grad-text">seu negócio?</span></h1>
+<p class="lead">Conte o que está travando o seu dia a dia. A primeira conversa é para entender o problema, sem compromisso.</p>
+</div></section>
+<section class="section"><div class="container contact-grid">
+<form class="form reveal" id="form-contato" novalidate>
+<div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" required autocomplete="name"></div>
+<div class="field"><label for="negocio">Nome do negócio</label><input id="negocio" name="negocio" autocomplete="organization"></div>
+<div class="field"><label for="interesse">O que você precisa?</label><select id="interesse" name="interesse" data-render="contatoOpcoes"></select></div>
+<div class="field"><label for="mensagem">Conte o problema</label><textarea id="mensagem" name="mensagem" placeholder="Ex.: recebo pedidos pelo WhatsApp e acabo perdendo vendas…"></textarea></div>
+<button class="btn btn--primary" type="submit">Enviar mensagem <span data-icon="arrow"></span></button>
+<div class="notice" id="form-aviso" hidden></div>
+</form>
+<div class="channels reveal" data-render="canais"></div>
+</div></section>
+</main>
+<div id="footer"></div>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
