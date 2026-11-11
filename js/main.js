@@ -8,6 +8,9 @@
 
   /* ---------- ícones ---------- */
   var I = {
+    layers: '<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5"/>',
+    cloud: '<path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5 4.5 4.5 0 0 1 17.5 18"/><path d="M12 21v-8M9 15.5l3-3 3 3"/>',
+    bars: '<path d="M5 20V12M12 20V5M19 20V9"/>',
     rocket: '<path d="M5 19c.5-3 2-4 4-4M14 5c3-1.5 5-1.5 6-1 .5 1 .5 3-1 6l-5 5-4-4 4-6z"/><path d="M9 15l-3 .5L5 19l3.5-1 .5-3zM15.5 8.5h.01"/>',
     code: '<path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
     phone: '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
@@ -40,9 +43,8 @@
     return "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent(msg || "Olá! Vim pelo site e gostaria de conversar sobre o meu negócio.");
   }
 
-  var logo =
-    '<svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0EA5FF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>' +
-    '<path d="M6 9l13-5v30l12 6-13 5L6 38z" fill="url(#lg)"/><path d="M22 14l12-5 8 4v22l-8 4-12-6 10-5V19l-10 3z" fill="url(#lg)" opacity=".92"/></svg>';
+  var SYM = '<svg class="logo__mark" viewBox="36 16 130 160" aria-hidden="true"><defs><linearGradient id="lgSym" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0EA5FF"/><stop offset=".52" stop-color="#315BFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs><path d="M42 22H66V111L132 148 119 170 42 126Z" fill="url(#lgSym)"/><path d="M82 58L111 76 141 57Q160 46 160 68V132H137V88L111 104 82 86Z" fill="url(#lgSym)"/></svg>';
+  var logo = SYM + '<span class="logo__txt"><b>' + esc(S.marca.nome) + '</b><em>' + esc(S.marca.sufixo) + '</em></span>';
 
   /* ---------- cabeçalho e rodapé ---------- */
   var nav = [
@@ -55,7 +57,7 @@
   if (header) {
     header.innerHTML =
       '<header class="site-header"><div class="container site-header__in">' +
-      '<a class="logo" href="index.html" aria-label="' + esc(S.marca.nome) + ' — início">' + logo + '<span class="logo__txt">' + esc(S.marca.nome) + "</span></a>" +
+      '<a class="logo" href="index.html" aria-label="' + esc(S.marca.nome) + ' Tech — início">' + logo + "</a>" +
       '<nav class="nav" id="nav" aria-label="Principal">' +
       nav.map(function (n) {
         return '<a href="' + n[0] + '"' + (n[2] === page ? ' aria-current="page"' : "") + ">" + n[1] + "</a>";
@@ -89,8 +91,8 @@
     footer.innerHTML =
       '<footer class="site-footer"><div class="container">' +
       '<div class="site-footer__top">' +
-      '<div><a class="logo logo--light" href="index.html">' + logo + '<span class="logo__txt">' + esc(S.marca.nome) + "</span></a>" +
-      '<p class="site-footer__lead">' + esc(S.marca.slogan) + ".</p></div>" +
+      '<div><a class="logo logo--light" href="index.html" aria-label="' + esc(S.marca.nome) + ' Tech — início">' + logo + "</a>" +
+      '<p class="site-footer__lead">' + esc(S.marca.slogan) + "</p></div>" +
       '<div><h4>Navegar</h4><ul>' + nav.map(function (n) { return '<li><a href="' + n[0] + '">' + n[1] + "</a></li>"; }).join("") + "</ul></div>" +
       '<div><h4>Soluções</h4><ul>' + S.frentes.map(function (f) { return '<li><a href="solucoes.html#' + f.id + '">' + esc(f.titulo) + "</a></li>"; }).join("") + "</ul></div>" +
       '<div><h4>Contato</h4><ul class="site-footer__contact">' + contatos.map(function (c) { return "<li>" + c + "</li>"; }).join("") +

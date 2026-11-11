@@ -6,10 +6,11 @@
 window.SITE = {
   marca: {
     nome: "Lidmay",
+    sufixo: "Tech",
     nomeProvisorio: false,
-    slogan: "Tecnologia que move negócios",
+    slogan: "Tecnologia que move negócios.",
     descricao:
-      "Soluções digitais com tecnologia, estratégia e foco no seu crescimento. Sites, aplicativos, sistemas e infraestrutura para negócios de todos os tamanhos.",
+      "Desenvolvimento de sites, aplicativos, sistemas e infraestrutura com tecnologia, estratégia e foco em resultados.",
   },
 
   // Número só com dígitos, com DDI e DDD. Ex.: "5581999999999". Vazio = botão leva para a página de contato.
@@ -57,7 +58,7 @@ window.SITE = {
       icone: "server",
       titulo: "Infraestrutura",
       resumo: "A base que mantém tudo no ar, seguro e funcionando.",
-      itens: ["Hospedagem e domínio", "Servidores", "Redes e Wi-Fi", "Integrações e manutenção"],
+      itens: ["Hospedagem, cloud e domínio", "Servidores", "Redes e Wi-Fi", "Integrações e manutenção"],
       detalhe:
         "Cuidamos do que fica por trás: onde o site mora, como a rede funciona, como os sistemas conversam entre si e quem resolve quando algo sai do ar.",
       paraQuem: "Quem já tem site ou sistema, mas sofre com lentidão, quedas, rede instável ou falta de suporte.",
@@ -94,11 +95,11 @@ window.SITE = {
   ],
 
   pilares: [
-    { icone: "rocket", titulo: "Inovação", texto: "Tecnologia atual aplicada com critério: só o que realmente move o seu negócio para frente." },
-    { icone: "pin", titulo: "Perto do comércio", texto: "Conhecemos a realidade do pequeno e médio negócio: pouco tempo, orçamento a cuidar e clientes de verdade no balcão." },
-    { icone: "chat", titulo: "Sem juridiquês de TI", texto: "Explicamos o que está sendo feito em português claro. Você entende o que está contratando." },
-    { icone: "wrench", titulo: "Sob medida", texto: "Nada de pacote engessado. Cada solução parte do problema do seu negócio, não de um produto pronto." },
-    { icone: "shield", titulo: "Presença depois da entrega", texto: "Hospedagem, manutenção e suporte continuam com a gente. Quem constrói, cuida." },
+    { icone: "rocket", titulo: "Inovação", texto: "Tecnologia atual aplicada com critério: só o que realmente faz o seu negócio avançar." },
+    { icone: "chat", titulo: "Parceria", texto: "Falamos com pessoas, não só com empresas. Entendemos o seu negócio antes de oferecer qualquer solução." },
+    { icone: "shield", titulo: "Confiança", texto: "Prometemos apenas o que a equipe consegue entregar, e seguimos ao seu lado depois do projeto no ar." },
+    { icone: "bars", titulo: "Crescimento", texto: "Cada solução nasce de uma necessidade real e é pensada para gerar resultado, não só um produto digital." },
+    { icone: "code", titulo: "Tecnologia", texto: "Sites, aplicativos, sistemas e infraestrutura explicados de forma clara, sem complicar." },
   ],
 
   fundadores: [
@@ -113,6 +114,6 @@ window.SITE = {
     "Aplicativo",
     "Hospedagem / servidor / rede",
     "Automação de processos",
-    "Ainda não sei — quero conversar",
+    "Ainda não sei: quero conversar",
   ],
 };

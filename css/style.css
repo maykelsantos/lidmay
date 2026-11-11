@@ -2,14 +2,14 @@
 
 :root {
   --navy: #0b1026;
-  --navy-2: #111838;
+  --navy-2: #101739;
   --navy-3: #182048;
   --blue: #0ea5ff;
   --violet: #8b5cf6;
   --grey: #cbd5e1;
   --muted: #8d99b5;
   --line: rgba(203, 213, 225, 0.14);
-  --grad: linear-gradient(135deg, #0ea5ff 0%, #8b5cf6 100%);
+  --grad: linear-gradient(135deg, #0ea5ff 0%, #315bff 52%, #8b5cf6 100%);
   --ok: #34d399;
   --warn: #fbbf24;
   --f-head: "Montserrat", system-ui, sans-serif;
@@ -60,8 +60,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(11, 16, 38, .82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
 .site-header__in { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .logo { display: inline-flex; align-items: center; gap: 10px; }
-.logo__mark { width: 34px; height: 34px; }
-.logo__txt { font-family: var(--f-head); font-weight: 700; font-size: 1.25rem; letter-spacing: .12em; text-transform: uppercase; color: #fff; }
+.logo__mark { width: 30px; height: 36px; }
+.logo__txt { display: grid; line-height: 1; gap: 4px; }
+.logo__txt b { font-family: var(--f-head); font-weight: 700; font-size: 1.28rem; letter-spacing: .06em; text-transform: uppercase; color: #fff; }
+.logo__txt em { font-style: normal; font-family: var(--f-head); font-weight: 700; font-size: .5rem; letter-spacing: .62em; text-transform: uppercase; background: linear-gradient(90deg, #0ea5ff, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .nav { display: none; align-items: center; gap: 6px; }
 .nav a:not(.btn) { padding: 8px 14px; border-radius: 999px; font-size: .95rem; color: var(--grey); transition: color .2s, background .2s; }
 .nav a:not(.btn):hover, .nav a[aria-current] { color: #fff; background: rgba(255, 255, 255, .07); }
@@ -79,8 +81,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero { position: relative; overflow: hidden; padding-top: 56px; padding-bottom: 72px; background:
   radial-gradient(60% 50% at 85% 0%, rgba(139, 92, 246, .35), transparent 70%),
   radial-gradient(50% 45% at 0% 30%, rgba(14, 165, 255, .22), transparent 70%); }
-.hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(203, 213, 225, .13) 1px, transparent 1.2px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%); mask-image: linear-gradient(180deg, #000 0%, transparent 85%); pointer-events: none; }
-.hero__in { position: relative; display: grid; gap: 44px; align-items: center; }
+.hero::before { content: ""; position: absolute; inset: 0; background: url("../img/padrao.svg") center top / 560px auto repeat; opacity: .55; -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 80%); mask-image: linear-gradient(180deg, #000 0%, transparent 80%); pointer-events: none; }
+.hero__symbol { position: absolute; z-index: 0; right: -6%; top: 50%; width: min(52vw, 560px); transform: translateY(-50%); opacity: .13; pointer-events: none; }
+.hero__in { position: relative; z-index: 1; display: grid; gap: 44px; align-items: center; }
 .hero h1 { margin-bottom: 20px; }
 .hero .lead { font-size: 1.12rem; margin-bottom: 28px; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -156,7 +159,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* CTA */
 .cta { position: relative; overflow: hidden; border-radius: 28px; padding: 44px 26px; text-align: center; background: var(--grad); color: #fff; }
-.cta::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, .22) 1px, transparent 1.2px); background-size: 24px 24px; opacity: .5; pointer-events: none; }
+.cta::after { content: ""; position: absolute; inset: 0; background: url("../img/padrao.svg") center / 480px auto; mix-blend-mode: soft-light; opacity: .5; pointer-events: none; }
 .cta > * { position: relative; z-index: 1; }
 .cta h2 { color: #fff; max-width: 18ch; margin-left: auto; margin-right: auto; }
 .cta p { color: rgba(255, 255, 255, .9); max-width: 48ch; margin: 0 auto 26px; }
